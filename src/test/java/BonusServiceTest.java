@@ -52,6 +52,7 @@ class BonusServiceTest {
     private BonusService service;
     long actual = service.calculate(amount, registered);
     boolean passed = expected == actual;
+    assertEquals(expected, actual);
 
     @Test
     void shouldCalculateRegistredFalseAndBonusOverLimit() {
